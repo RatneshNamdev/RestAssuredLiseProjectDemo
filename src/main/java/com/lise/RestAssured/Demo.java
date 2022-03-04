@@ -13,7 +13,7 @@ public class Demo
         System.out.println("This will execute before every method..");
     }
 
-    @Test()
+    @Test
     @Owner("Ratnesh")
     @Severity(SeverityLevel.NORMAL)
     @Description("This is demo.. of report file...")

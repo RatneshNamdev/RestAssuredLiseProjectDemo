@@ -1,20 +1,28 @@
 package com.lise.RestAssured;
 
-import static org.junit.Assert.assertTrue;
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.testng.annotations.*;
 
-import org.junit.Test;
-
-/**
- * Unit test for simple App.
- */
-public class AppTest 
+public class AppTest
 {
-    /**
-     * Rigorous Test :-)
-     */
+    @BeforeSuite
+    public void test(){
+        System.out.println("This will execute before every method..");
+    }
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    @Owner("Ratnesh")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("This is demo.. of report file...")
+    public void setUp(){
+        System.out.println("This is Demo one..");
+    }
+
+    @AfterSuite
+    public void test1(){
+        System.out.println("This will execute after every method...");
     }
 }
